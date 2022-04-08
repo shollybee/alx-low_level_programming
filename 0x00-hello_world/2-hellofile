@@ -1,0 +1,45 @@
+
+
+
+#!/bin/bash
+echo "Hello, World"
+
+Display current directory contents.
+
+Long format
+with user and group IDs displayed numerically
+And hidden files (starting with .)
+
+
+mktemp -d -t ci-my_first_directory
+
+
+betty from /tmp/ to /tmp/my_first_directory.
+
+mv /tmp/betty /tmp/my_first_directory
+
+git commit -m "Task 10"
+
+wc -l 4-puts.c
+chmod u+x 4-puts.c
+
+git add 4-puts.c
+
+cat > 4-puts.c
+#!/bin/bash
+chmod u+x 0-alias
+
+git commit -m "Task 4"
+
+git status
+git push
+
+git commit -am "Task0 again"
+
+echo \*\\'"Best School"\'\\*$\?\*\*\*\*\*:)
+
+
+#!/bin/bash
+gcc $CFILE -E -o c#include <stdio.h>
+
+
