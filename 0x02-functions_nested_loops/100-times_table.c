@@ -8,7 +8,8 @@
  *
  * Return: void
  */
-times_table-print(int n)
+
+void print_times_table(int n)
 {
 	int row, column, product;
 
@@ -50,4 +51,3 @@ times_table-print(int n)
 			_putchar('\n');
 		}
 	}
-}
