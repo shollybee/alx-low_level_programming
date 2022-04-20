@@ -1,17 +1,44 @@
 #include "main.h"
-
 /**
-* _strlen - checks the length of a string
-* @s: string to check
-*
-* Return: int length of the string
-*/
+ * rev_string - prints a reverse string
+ *@s: A pointer to an int that will be changed
+ *
+ *Return: void
+ */
 
-int _strlen(char *s)
+void rev_string(char *s)
 {
-	int length = 0;
+char *start_c, *end_c, c;
+int i, count;
+int length = 0;
 
-	while (s[length])
-		length++;
-	return (length);
+for (i = 0; s[i]; i++)
+{
+length++;
+}
+
+count = length;
+
+start_c = s;
+end_c = s;
+
+
+for (i = 0; i < count - 1; i++)
+{
+end_c++;
+}
+
+
+for (i = 0; i < count / 2; i++)
+{
+
+
+c = *end_c;
+*end_c = *start_c;
+*start_c = c;
+
+
+start_c++;
+end_c--;
+}
 }
