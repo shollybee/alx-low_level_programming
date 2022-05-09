@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 /**
@@ -163,7 +163,7 @@ void impresion(char *s, int a)
 	_putchar('\n');
 }
 /**
- * main - check the code for Holberton School students.
+ * main - check the code for main.h School students.
  * @argv: array of pointers store the arguments
  * @argc: quantity of arguments
  * Return: Always 0.
