@@ -1,51 +1,92 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * string_nconcat - concatenates two strings.
- * @s1: first string
- * @s2: second string
- * @n: index
- * Return: char pointer
+ * _puts - prints a string, followed by a new line,
+ * @str: pointer to the string to print
+ * Return: void
  */
 
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+void _puts(char *str)
 {
-	char *p;
-	unsigned int size1 = 0, size2 = 0, i;
+int i = 0;
+while (str[i])
+{
+_putchar(str[i]);
+i++;
+}
 
-	if (s1 == NULL)
-		s1 = "";
+}
 
-	if (s2 == NULL)
-		s2 = "";
+/**
+ * _atoi - convert a string to an integer.
+ * @s: char type string
+ * Return: integer converted
+ */
 
-	while (s1[size1] != '\0')
-	{
-		size1++;
-	}
+int _atoi(const char *s)
+{
+int sign = 1;
+unsigned long int resp = 0, firstNum, i;
 
-	while (s2[size2] != '\0')
-	{
-		size2++;
-	}
+for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
+{
+if (s[firstNum] == '-')
+{
+sign *= -1;
+}
+}
 
-	if (n > size2)
-	n = size2;
-	p = malloc((size1 + n + 1) * sizeof(char));
+for (i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
+{
+resp *= 10;
+resp += (s[i] - 48);
+}
 
-	if (p == NULL)
-		return (0);
+return (sign *resp);
+}
 
-	for (i = 0; i < size1; i++)
-	{
-		p[i] = s1[i];
-	}
+/**
+ * print_int - prints an integer.
+ * @n: int
+ * Return: 0
+ */
 
-	for (; i < (size1 + n); i++)
-	{
-		p[i] = s2[i - size1];
-	}
-	p[i] = '\0';
+void print_int(unsigned long int n)
+{
 
-return (p);
+unsigned  long int divisor = 1, i, resp;
+
+for (i = 0; n / divisor > 9; i++, divisor *= 10)
+;
+
+for (; divisor >= 1; n %= divisor, divisor /= 10)
+{
+resp = n / divisor;
+_putchar('0' + resp);
+}
+
+}
+
+/**
+ * main - print the result of the multiplication, followed by a new line
+ * @argc: int
+ * @argv: list
+ * Return: 0
+ */
+
+int main(int argc, char const *argv[])
+{
+(void)argc;
+
+if (argc != 3)
+{
+_puts("Error ");
+exit(98);
+}
+print_int(_atoi(argv[1]) * _atoi(argv[2]));
+_putchar('\n');
+
+return (0);
 }
