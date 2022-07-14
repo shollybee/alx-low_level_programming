@@ -1,5 +1,5 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef main_h
+#define main_h
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,4 +25,4 @@ unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 
-#endif /* HOLBERTON_H */
+#endif /* main_h */
